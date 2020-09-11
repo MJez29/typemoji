@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:jest/style",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "indent": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "no-empty": "off"
+  },
+  "plugins": ["jest", "@typescript-eslint"],
+  "ignorePatterns": ["node_modules/", "config/", "static/"],
+  "globals": {
+    "chrome": true
+  }
+}

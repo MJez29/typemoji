@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "lib": ["es2019", "dom"],
+    "baseUrl": "src",
+    "paths": {
+      // Keep up to date with webpack.config.js
+      "@src/*": ["*"]
+    }
+  }
+}

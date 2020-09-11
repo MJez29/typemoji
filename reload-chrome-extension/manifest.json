@@ -1,0 +1,15 @@
+{
+  "name": "Reload Chrome Extension",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "reload.js"
+    ]
+  },
+  "permissions": [
+    "management",
+    "alarms"
+  ]
+}
