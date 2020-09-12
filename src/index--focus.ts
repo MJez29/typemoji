@@ -10,7 +10,10 @@ function onHtmlInputChanged(event: Event) {
 
   if (
     !target ||
-    !(target instanceof HTMLInputElement) ||
+    !(
+      target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement
+    ) ||
     target.selectionStart !== target.selectionEnd
   ) {
     return;

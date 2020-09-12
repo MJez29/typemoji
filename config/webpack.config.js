@@ -7,31 +7,32 @@ const srcPath = path.join(__dirname, "..", "src");
 
 module.exports = {
   entry: {
-    index: "./src/index.ts"
+    "content-script": path.join(srcPath, "content-script.ts"),
+    background: path.join(srcPath, "background.ts"),
   },
   output: {
     filename: "[name].js",
-    path: buildPath
+    path: buildPath,
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: "ts-loader",
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
     extensions: [".mjs", ".tsx", ".ts", ".js"],
     alias: {
       // Keep up to date with tsconfig.json
-      "@src": path.resolve(srcPath)
-    }
+      "@src": path.resolve(srcPath),
+    },
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: staticPath, to: buildPath }]}
-    )
-  ]
+      patterns: [{ from: staticPath, to: buildPath }],
+    }),
+  ],
 };
